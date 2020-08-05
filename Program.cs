@@ -34,4 +34,4 @@ namespace AlgoExpert
             Console.WriteLine($"{FindTheNumber(testArray)}");
         }
     }
-}
+} 
