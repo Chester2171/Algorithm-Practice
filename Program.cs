@@ -1,0 +1,37 @@
+﻿using System;
+
+namespace AlgoExpert
+{
+    class Program
+    {
+
+        public static int FindTheNumber(int[] array)
+        {
+            for (int i =0; i < array.Length; i++)
+            {
+                int count = 0;
+                for (int j = 0; j < array.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        if (array[i] == array[j])
+                        {
+                            count++;
+                        }
+                    }
+                }
+                if (count == 0)
+                {
+                    return array[i];
+                }
+            }
+            return 0;
+        }
+
+        static void Main(string[] args)
+        {
+            int[] testArray = new int[] { 1, 1, 2, 2, 4, 6, 6, 8, 8, 10, 10 };
+            Console.WriteLine($"{FindTheNumber(testArray)}");
+        }
+    }
+}
