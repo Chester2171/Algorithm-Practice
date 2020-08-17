@@ -1,2 +1,2 @@
-## <div align="center">Algorithm-Practice Fundamentals</div>
+## <div align="center">Algorithms & Data Structures Fundamentals</div>
 
