@@ -1,0 +1,21 @@
+namespace ReverseInt
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Reversed(658793));
+        }
+        public static int Reversed(int x)
+        {
+            int reversedInt = 0;
+            while (x != 0)
+            {
+                if (reversedInt != 0) reversedInt *= 10;
+                reversedInt += x % 10;
+                x /= 10;
+            }
+            return reversedInt;
+        }
+    }
+}
