@@ -1,0 +1,18 @@
+namespace HowManyWords
+{
+    class Program
+    {
+        static int NumOfWords(string input)
+        {
+            string[] allStrings = input.Split(' ');
+            int result = allStrings.Length;
+            return result;
+        }
+
+        static void Main(string[] args)
+        {
+            string input = "The Dog Runs Fast";
+            Console.WriteLine(NumOfWords(input));
+        }
+    }
+}
