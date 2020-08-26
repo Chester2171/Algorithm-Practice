@@ -1,0 +1,23 @@
+using System;
+
+namespace IntSwap
+{
+    class Program
+    {
+        public static string IntSwap(int X, int Y)
+        {
+            X = X + Y;
+            Y = X - Y;
+            X = X - Y;
+            return ($"{X},{Y}");
+        }
+        public static void Main(string[] args)
+        {
+            int X = 9;
+            int Y = 3;
+            Console.WriteLine($"{X}, {Y} "+ "Swapped around is: " + IntSwap(X, Y));
+        }
+        //I wish I was smarter so I could figure out how to make a space between the second pair of numbers.
+    }
+}
+//I used Visual Studio for this one as I wanted to run it and see how it turned out
