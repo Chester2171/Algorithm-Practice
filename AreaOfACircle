@@ -1,0 +1,15 @@
+Given two points, that serve as opposite points of a cirlce return the area of a circle
+find the area of a cirlce as a double
+
+Area of a Circle = pi r^2
+
+static double GetArea(point a, point b)
+{
+	double radius = (Math.Sqrt(Math.Pow((a.x-b.x),2) + Math.Pow((a.y-b.y),2)) / 2;
+		
+	double area = Math.Pi * Math.Pow(radius,2);
+	
+	return area;
+}
+
+Tim Weigel finished this in a whiteboarding sessoin
