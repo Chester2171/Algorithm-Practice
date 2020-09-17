@@ -1,0 +1,27 @@
+Write a program that takes in a string as an input and returns if the input lenght is even or odd.
+
+namespace EvenOrOdd
+{
+    class Program
+    {
+        public static string EvenOrOdd(string input)
+        {
+            if (input.Length % 2 == 0)
+            {
+                return "Even";
+            }
+            else
+            {
+                return "Odd";
+            }
+        }
+        
+        static void Main(string[] args)
+        {
+            string input = "Am I Even or Odd?";
+            Console.WriteLine(EvenOrOdd(input));
+        }
+    }
+}
+
+This questoin was given during the bi-weekly tech mentoring session.
