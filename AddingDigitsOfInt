@@ -1,0 +1,27 @@
+Given an int and add up the individual digits of the int and return the solution. 
+
+namespace AddingDigits
+{
+    class Program
+    {
+        public static int AddingDigits(int input)
+        {
+            int output = 0;
+
+            while(input != 0)
+            {
+                output += input % 10;
+                input = input / 10;
+            }
+            return output;
+        }
+        
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine(AddingDigits(-154));
+        }
+    }
+}
+
+This solution was found with the help of Tim Weigel. I have trouble wrapping my mind around the modulus operator, Tim tried his best to help me only time will tell.
