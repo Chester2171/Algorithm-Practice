@@ -29,5 +29,4 @@ public static string IpAddress(string input)
 	return output;
 }
 
-Whiteboarding practice question with Tim Weigel, Richard Lee, Melinda McDowell. I was able to solve the question but failed to address why i was making the method public and
-static in my whiteboarding session.
+Whiteboarding practice question with Tim Weigel, Richard Lee, Melinda McDowell. I was able to solve the question.
