@@ -1,0 +1,26 @@
+Given an int return if it is prime or not.
+The number will be positive.
+There will not be null value.
+
+example input = 7
+example output = "The Number is Prime"
+____________________________________________
+public static string IsPrime(int input)
+{
+	bool output = true;
+	for (int i = 2; i < input; i++)
+	{
+		if (input % i == 0)
+	  {
+			output = false;
+		}
+	}
+	if (output == true)
+	{
+		return "The Number is Prime";
+	}
+	else
+	{
+		return "The Number is Not Prime";
+	}
+}
