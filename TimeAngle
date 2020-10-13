@@ -1,0 +1,12 @@
+given the time of day as hour and minute return the smallest angle made by the hour and minute hands of a clock.
+
+public static double TimeAngle(double hour, double minute)
+{
+    double angle = (Math.Abs(hour * 30 - minute * 6);
+    if (angle > 180) 
+	  {
+		  angle = 360 - angle;
+	  }
+    return angle;
+}
+
