@@ -1,0 +1,37 @@
+given a string return if it is a palandrome.
+only letters
+ignore case and special characters if given spaces strip them out.
+built in functions such as split and trim are allowed to be used.
+
+example input = "racecar"
+example outout = true
+
+example input = "A Toyota's a Toyota"
+example output = "atoyotasatoyota" = true
+
+*/
+first given a string evaluate the characters to determine if they are letters. make sure they are to lower.
+if they are letters add them to a new variable
+then check them based on a standard palindrome.
+\*
+
+public static bool IsPalindrome(string input)
+{
+	input = input.ToLower();
+	string checkInput = "";
+	for(int i = 0; i < input.Length; i++)
+	{
+		if(input[i] >= 'a' && input[i] <= 'z')
+		{
+			checkInput += input[i];
+		}
+	}
+	for(int j = 0; j < checkInput.Length / 2; j++)
+	{
+		if(checkInput[j] != checkInput[checkInput.Length - j - 1])
+		{
+			return false;
+		}
+	}
+	return true;
+}
