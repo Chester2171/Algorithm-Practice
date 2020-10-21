@@ -1,0 +1,30 @@
+given an int return the value of all individual digits added together.
+
+will there be any negative numbers. there could be.
+all returns will be positive.
+will be a valid int returned.
+
+input = 125
+output = 8
+
+*/
+seperate each number of the int and add them together
+while loop
+% each number then divide the input by \10 to remove the number and continue in the cycle
+return the added int value 
+\*
+
+public static int AddingDigits(int input)
+{
+	int output = 0;
+	while(input != 0)
+	{
+		output += input % 10;
+		input /= 10;
+	}
+	if(output < 0)
+	{
+		output *= -1;
+	}
+	return output;
+}
