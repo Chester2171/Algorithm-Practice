@@ -1,0 +1,27 @@
+Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
+Note: You may assume the string contains only lowercase English letters.
+
+// Tim helped me to think of a different way of solving this algorithm as i initally jumped straight in and attempted to solve this more complex than neccessary.
+public class Solution 
+{
+    public int FirstUniqChar(string s) 
+    {
+        for(int i = 0; i < s.Length; i++)
+        {
+            bool isUniq = false;
+            for(int j = 0; j < s.Length; j++)
+            {
+                if(s[i] == s[j] && i != j)
+                {
+                    isUniq = true;
+                    break;
+                }
+            }
+            if(isUniq == false)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
