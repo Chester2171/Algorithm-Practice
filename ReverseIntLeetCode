@@ -1,0 +1,31 @@
+Given a 32-bit signed integer, reverse digits of an integer.
+
+Note:
+Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: 
+[−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+
+
+public class Solution 
+{
+    public int Reverse(int x) 
+    {
+        try
+        {
+            int reverse = 0;
+            while(x != 0)
+            {
+                if(reverse != 0) reverse = checked (reverse * 10);
+                reverse += x % 10;
+                x = x / 10;
+            }
+        return reverse;
+        }
+        catch(System.OverflowException)
+        {
+            return 0;
+        }
+    }
+}
+
+//I initally did not read the above note and did not include the try catch block and kept getting an error on the 1027 test case 
+//with the help of both Richard Lee and Tim Weigel i was able to add a well formed try catch block
