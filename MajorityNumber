@@ -1,0 +1,66 @@
+This is from leetcode and Richard Lee came to the rescue.
+
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the majority element always exist in the array.
+
+
+//This is my first attempt and in leetcode I did not optimize enough and had a time limit exceeded error.
+//This is what i feel most comfortable with, but it can definately be optimized.
+public class Solution 
+{
+    public int MajorityElement(int[] nums) 
+    {
+        int temp = 0;
+        int output = 0;
+        for(int i = 0; i < nums.Length; i++)
+        {
+            int count = 0;
+            for(int j = 0; j < nums.Length; j++)
+            {
+                if(nums[i] == nums[j])
+                {
+                    count++;
+                }
+            }
+            if(count > temp)
+            {
+                temp = count;
+                output = nums[i];
+            }
+        }
+        return output;
+    }
+}
+
+//Richard Lee was able to help me come to this solution while teaching me about Dictionaries and how they are PROPERLY used. 
+//It was helpful to see how the dictionary can optimize the above algorithm.
+public class Solution 
+{
+    public int MajorityElement(int[] nums) 
+    {
+        Dictionary<int, int> bigNum = new Dictionary<int, int>();
+        for(int i = 0; i < nums.Length; i++)
+        {
+            if(bigNum.ContainsKey(nums[i]))
+            {
+                bigNum[nums[i]]++;
+            }
+            else
+            {
+               bigNum.Add(nums[i], 1); 
+            }
+        }
+        int compare = 0;
+        int result = 0;
+        
+        foreach(int x in bigNum.Keys)
+        {
+            if(compare < bigNum[x])
+            {
+                compare = bigNum[x];
+                result = x;
+            }
+        }
+        return result;
+    }
+}
