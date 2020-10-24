@@ -1,0 +1,43 @@
+given a string return the number of vowels in the string.
+
+what are considered vowels 'a' 'e' 'i' 'o' 'u' sometimes 'y'
+will the string have spaces. yes
+the string can be null. return invalid entry if it is null.
+will the string contain upper and lower case, return regardless of case.
+
+example: "Even Though"
+return: 4
+
+if a 'y' is encountered, add the 'y' to the vowels and return the vowels up to
+that point.
+
+*/
+first i want to evaluate if the string is null and return the invalid.
+set up a counter, and increment for every vowel.
+set everything to lower prior to evaluation of letters.
+use a loop to go through the string.
+/*
+
+public static int Vowels(string input)
+{
+	if(String.IsNullOrEmpty(input)) Console.WriteLine("Invalid entry");
+	
+	int count = 0;
+	input = input.ToLower();
+	
+	for(int i = 0; i < input.Length; i++)
+	{
+		if(input[i] == 'y')
+		{
+			count++;
+			break;
+		}
+		else if(input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
+		{
+			count++;
+		}
+	}
+	return count;
+}
+
+the biggest issue that i had with this problem is that i ran into an issue with the tolower syntax. initally i put string.ToLower(input). 
