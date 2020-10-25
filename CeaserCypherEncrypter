@@ -1,0 +1,30 @@
+Given a non empty string of lower case characters and a non negative int representing a key
+return a new string obtained by shifting every letter in the string by 'k' positions where 'k' positions equals the key
+if the number would push the letter past the end of the alphabet return to the begining, so if the letter
+is 'z' and the key is 1 it would make the letter 'a'
+
+input = "cody" key = 1
+output = "dpez" **key = 1 not output**
+
+
+public static string KeyString(string input, int key)
+		{
+			if (key > 26) key = key % 26;
+			string output = "";
+			foreach (char x in input)
+			{
+				if (x + key <= 'z')
+				{
+					output += (char)(x + key);
+				}
+				else if (x + key > 'z')
+				{
+					int temp = key - ((int)'z' - (int)x);
+					output += (char)('a' + temp - 1);
+				}
+			}
+			return output;
+		}
+    
+    Tim Weigel helped me solve this problem, I needed help for numbers that exceeded 'z' and when the key is bigger than 26.
+    Once I had the logic down I was able to finish the problem I just needed a helping hand.
