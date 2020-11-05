@@ -1,0 +1,34 @@
+given an array find the largest and smallest element in an array
+
+are the elements of the array positive. not neccessarily.
+the return the largest and the smallest.
+
+**
+first I want to identify the largest element and the then I want to identify the smallest element
+using a for loop to sort throught the elements of the array and return the largest and smallest.
+or I might compare the elements.
+**
+
+public static int[] LargestAndSmallest(int[] input)
+{
+	int[] output = new int[2];
+	for(int i = 0; i < input.Length; i++)
+	{
+		for(int j = 0: j < input.Length; j++)
+		{
+			if(input[i] > input[j])
+			{
+				output[0] = input[i];
+			}
+			else if(input[i] < input[j])
+			{
+				output[1] = input[i];
+			}
+		}
+	}
+	return output;
+}
+
+example: { 1, 7, -10, 200 }
+
+In the future I would not use a nested for loop and only iterate through one loop and evaluate the output array from the input.
