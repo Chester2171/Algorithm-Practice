@@ -1,0 +1,41 @@
+This problem started out as a riddle: There are four friends attempting to cross a bridge at night and looks similar to the problem below.
+
+There are 4 persons (A, B, C and D) who want to cross a bridge in night.
+
+A takes 1 minute to cross the bridge.
+B takes 2 minutes to cross the bridge.
+C takes 5 minutes to cross the bridge.
+D takes 8 minutes to cross the bridge.
+
+There is only one torch with them and the bridge cannot be crossed without the torch. There cannot be more than two persons on the bridge at any time, and when two people 
+cross the bridge together, they must move at the slower person’s pace.
+
+Given a random set of four values representing friends crossing a bridge.
+find the least amount of time required to cross.
+
+*/
+evaluate the friends against each other to sort them. 
+then i will use.
+ab cross with a returning. add them
+(b+a+d+b+b)
+\*
+
+public static int BridgeCrossing(int[] input)
+{
+	int output = 0;
+	for(int i = 0; i < input.Length; i++)
+	{
+		for(int j = 0; j < input.Length; j++)
+		{
+			if(input[i] > input[j])
+			{
+				int temp = input[j];
+				input[j] = input[i];
+				input[i] = temp;
+			}
+		}
+	}
+	return 3 * input[1] + input[0] + input[3];
+}
+
+example: { 20, 7, 13, 42 }
