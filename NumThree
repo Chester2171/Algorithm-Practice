@@ -1,0 +1,30 @@
+anagram: "taco" and "coat"
+
+given two strings determine if they are anagrams.
+return true if they are and return false if they arent.
+
+*/
+first i am going to evaluate if they are the same length.
+i am going to evaluate each letter and determine if they are match the other string.
+then i am going to return true if they are and false if they are not.
+*/
+
+public static bool Anagram(string one, string two)
+{
+	if(one.Length != two.Length) return false;
+	
+	for(int i = 0; i < one.Length; i++)
+	{
+		bool isAnagram = false;
+		for(int j = 0; j < one.Length; j++)
+		{
+			if(one[i] == two[j])
+			{
+				isAnagram = true;
+			}
+		}
+		if(isAnagram == false) return false;
+	}
+	return true;
+}
+
